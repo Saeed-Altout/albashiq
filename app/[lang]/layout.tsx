@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang={params.lang} dir={params.lang == "ar" ? "rtl" : "ltr"}>
-      <body className={params.lang == "ar" ? "!font-tajawal" : "!font-poppins"}>
+      <body className={params.lang == "ar" ? "!font-cairo" : "!font-poppins"}>
         <Navbar lang={params.lang} />
         <Bar />
         {children}
