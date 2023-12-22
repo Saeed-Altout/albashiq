@@ -89,7 +89,7 @@
       "form": {
         "fullName": {
           "label": "الاسم الكامل",
-          "placeholder": "John Doe"
+          "placeholder": "جون دو"
         },
         "email": {
           "label": "البريد الإلكتروني",

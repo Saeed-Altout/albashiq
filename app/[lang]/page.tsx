@@ -75,7 +75,7 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
     <main>
       <Hero content={page.hero} />
       <About content={page.about} data={paragraphs} />
-      <Areas content={page.about} data={areas} />
+      <Areas content={page.areas} data={areas} />
       <Features content={page.features} data={features} />
       <Faqs content={page.faqs} data={questions} />
       <Contact page={page} />

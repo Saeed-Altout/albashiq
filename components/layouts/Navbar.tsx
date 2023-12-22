@@ -43,7 +43,7 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
 
   return (
     <header>
-      <nav className="border-b h-20 flex justify-center items-center">
+      <nav className="fixed md:relative w-full top-0 left-0 z-[1000] border-b h-20 flex justify-center items-center">
         <div className="relative container mx-auto flex justify-between items-center bg-white h-full z-50">
           <Link href={`/${lang}`}>
             <Image src={logo} alt="logo" className="w-20" priority />

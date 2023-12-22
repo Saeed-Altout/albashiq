@@ -245,7 +245,10 @@ const Contact = ({ page }: { page: any }) => {
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
-                        <FormControl>
+                        <FormControl
+                          dir={lang == "ar" ? "rtl" : "ltr"}
+                          className={lang == "ar" ? "text-right" : "text-left"}
+                        >
                           <SelectTrigger className="h-fit">
                             <SelectValue
                               placeholder={
@@ -254,7 +257,7 @@ const Contact = ({ page }: { page: any }) => {
                             />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent>
+                        <SelectContent dir={lang == "ar" ? "rtl" : "ltr"}>
                           {/* Map through services and render SelectItem for each */}
                           {services.map((serv) => (
                             <SelectItem key={serv.label} value={serv.value}>
