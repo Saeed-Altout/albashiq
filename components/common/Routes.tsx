@@ -17,21 +17,7 @@ const Routes = ({
   lang: Locale;
   routes: Route[];
 }) => {
-  const [linkActive, setLinkActive] = useState("/");
   const [menuActive, setMenuActive] = useState(false);
-
-  const handleActiveLink = (value: string) => {
-    setLinkActive(value);
-    localStorage.setItem("linkActive", value);
-  };
-
-  useEffect(() => {
-    const currentLinkActive = localStorage.getItem("linkActive");
-    if (currentLinkActive) {
-      setLinkActive(currentLinkActive);
-    }
-  }, []);
-
   return (
     <div>
       <>
@@ -40,10 +26,7 @@ const Routes = ({
             <Link
               key={href}
               href={`/${lang}/${href}`}
-              className={`text-muted-foreground capitalize hover:text-primary transition ${
-                linkActive === href && "!text-primary"
-              }`}
-              onClick={() => handleActiveLink(href)}
+              className="capitalize hover:text-primary transition"
             >
               {label}
             </Link>
@@ -61,11 +44,8 @@ const Routes = ({
               <Link
                 key={href}
                 href={`/${lang}/${href}`}
-                className={`text-muted-foreground capitalize hover:text-primary transition ${
-                  linkActive === href && "!text-primary"
-                }`}
+                className="capitalize hover:text-primary transition"
                 onClick={() => {
-                  handleActiveLink(href);
                   setMenuActive(false);
                 }}
               >

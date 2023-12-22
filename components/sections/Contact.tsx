@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-
+import emailjs from "@emailjs/browser";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -29,7 +29,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 import { Title, TitleSection } from "@/components/common/TitleSection";
-import conatctUs from "@/public/contact-us.svg";
+import contactUs from "@/public/contact-us.svg";
+import toast from "react-hot-toast";
+import { CircleDashed } from "lucide-react";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -46,8 +48,36 @@ const formSchema = z.object({
 });
 
 const Contact = ({ page }: { page: any }) => {
-  async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  const [loading, setLoading] = useState(false);
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    setLoading(true);
+    emailjs
+      .send(
+        "service_4yxknul",
+        "template_vz9jyt7",
+        {
+          from_name: values.username,
+          to_name: "Albashiq Company",
+          from_email: values.email,
+          to_email: "services@albashiq.net",
+          message: values.message,
+          phoneNumber: values.phoneNumber,
+          service: values.services,
+        },
+        "braUPkRv7rc2nn0fk"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          toast.success(page.contact.messageSuccess);
+        },
+        (error) => {
+          setLoading(false);
+          toast.error(page.contact.messageError);
+          console.log(error);
+        }
+      );
   }
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -63,56 +93,56 @@ const Contact = ({ page }: { page: any }) => {
 
   const services = [
     {
-      label: page.conatct.form.servicesData.serv01.label,
-      value: page.conatct.form.servicesData.serv01.value,
+      label: page.contact.form.servicesData.serv01.label,
+      value: page.contact.form.servicesData.serv01.value,
     },
     {
-      label: page.conatct.form.servicesData.serv02.label,
-      value: page.conatct.form.servicesData.serv02.value,
+      label: page.contact.form.servicesData.serv02.label,
+      value: page.contact.form.servicesData.serv02.value,
     },
     {
-      label: page.conatct.form.servicesData.serv03.label,
-      value: page.conatct.form.servicesData.serv03.value,
+      label: page.contact.form.servicesData.serv03.label,
+      value: page.contact.form.servicesData.serv03.value,
     },
     {
-      label: page.conatct.form.servicesData.serv04.label,
-      value: page.conatct.form.servicesData.serv04.value,
+      label: page.contact.form.servicesData.serv04.label,
+      value: page.contact.form.servicesData.serv04.value,
     },
     {
-      label: page.conatct.form.servicesData.serv05.label,
-      value: page.conatct.form.servicesData.serv05.value,
+      label: page.contact.form.servicesData.serv05.label,
+      value: page.contact.form.servicesData.serv05.value,
     },
     {
-      label: page.conatct.form.servicesData.serv06.label,
-      value: page.conatct.form.servicesData.serv06.value,
+      label: page.contact.form.servicesData.serv06.label,
+      value: page.contact.form.servicesData.serv06.value,
     },
     {
-      label: page.conatct.form.servicesData.serv07.label,
-      value: page.conatct.form.servicesData.serv07.value,
+      label: page.contact.form.servicesData.serv07.label,
+      value: page.contact.form.servicesData.serv07.value,
     },
     {
-      label: page.conatct.form.servicesData.serv08.label,
-      value: page.conatct.form.servicesData.serv08.value,
+      label: page.contact.form.servicesData.serv08.label,
+      value: page.contact.form.servicesData.serv08.value,
     },
     {
-      label: page.conatct.form.servicesData.serv09.label,
-      value: page.conatct.form.servicesData.serv09.value,
+      label: page.contact.form.servicesData.serv09.label,
+      value: page.contact.form.servicesData.serv09.value,
     },
     {
-      label: page.conatct.form.servicesData.serv10.label,
-      value: page.conatct.form.servicesData.serv10.value,
+      label: page.contact.form.servicesData.serv10.label,
+      value: page.contact.form.servicesData.serv10.value,
     },
     {
-      label: page.conatct.form.servicesData.serv11.label,
-      value: page.conatct.form.servicesData.serv11.value,
+      label: page.contact.form.servicesData.serv11.label,
+      value: page.contact.form.servicesData.serv11.value,
     },
     {
-      label: page.conatct.form.servicesData.serv12.label,
-      value: page.conatct.form.servicesData.serv12.value,
+      label: page.contact.form.servicesData.serv12.label,
+      value: page.contact.form.servicesData.serv12.value,
     },
     {
-      label: page.conatct.form.servicesData.serv13.label,
-      value: page.conatct.form.servicesData.serv13.value,
+      label: page.contact.form.servicesData.serv13.label,
+      value: page.contact.form.servicesData.serv13.value,
     },
   ];
 
@@ -120,12 +150,12 @@ const Contact = ({ page }: { page: any }) => {
     <section id="contact-us">
       <div className="container">
         <TitleSection>
-          <Title>{page.conatct.title}</Title>
+          <Title>{page.contact.title}</Title>
         </TitleSection>
 
         <div className="mt-20 flex gap-10 justify-center items-center flex-col lg:flex-row">
           <Image
-            src={conatctUs}
+            src={contactUs}
             alt="Contact Us"
             priority
             loading="eager"
@@ -145,11 +175,11 @@ const Contact = ({ page }: { page: any }) => {
                   render={({ field }) => (
                     <FormItem className="col-span-1">
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
-                        {page.conatct.form.fullName.label}
+                        {page.contact.form.fullName.label}
                       </FormLabel>
                       <FormControl>
                         <Input
-                          placeholder={page.conatct.form.fullName.placeholder}
+                          placeholder={page.contact.form.fullName.placeholder}
                           {...field}
                         />
                       </FormControl>
@@ -164,11 +194,11 @@ const Contact = ({ page }: { page: any }) => {
                   render={({ field }) => (
                     <FormItem className="col-span-1">
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
-                        {page.conatct.form.email.label}
+                        {page.contact.form.email.label}
                       </FormLabel>
                       <FormControl className="text-left">
                         <Input
-                          placeholder={page.conatct.form.email.placeholder}
+                          placeholder={page.contact.form.email.placeholder}
                           {...field}
                         />
                       </FormControl>
@@ -183,12 +213,12 @@ const Contact = ({ page }: { page: any }) => {
                   render={({ field }) => (
                     <FormItem className="col-span-1">
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
-                        {page.conatct.form.phoneNumber.label}
+                        {page.contact.form.phoneNumber.label}
                       </FormLabel>
                       <FormControl>
                         <Input
                           placeholder={
-                            page.conatct.form.phoneNumber.placeholder
+                            page.contact.form.phoneNumber.placeholder
                           }
                           {...field}
                         />
@@ -204,7 +234,7 @@ const Contact = ({ page }: { page: any }) => {
                   render={({ field }) => (
                     <FormItem className="col-span-1">
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
-                        {page.conatct.form.services.label}
+                        {page.contact.form.services.label}
                       </FormLabel>
                       {/* Select component for services */}
                       <Select
@@ -215,7 +245,7 @@ const Contact = ({ page }: { page: any }) => {
                           <SelectTrigger className="h-fit">
                             <SelectValue
                               placeholder={
-                                page.conatct.form.services.placeholder
+                                page.contact.form.services.placeholder
                               }
                             />
                           </SelectTrigger>
@@ -240,11 +270,11 @@ const Contact = ({ page }: { page: any }) => {
                   render={({ field }) => (
                     <FormItem className="col-span-1 md:col-span-2">
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
-                        {page.conatct.form.message.label}
+                        {page.contact.form.message.label}
                       </FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder={page.conatct.form.message.placeholder}
+                          placeholder={page.contact.form.message.placeholder}
                           {...field}
                         />
                       </FormControl>
@@ -255,10 +285,22 @@ const Contact = ({ page }: { page: any }) => {
 
                 {/* Submit button */}
                 <Button
+                  disabled={loading}
                   type="submit"
                   className="w-full px-10 md:w-fit mx-auto col-span-1 md:col-span-2 tracking-wider text-sm md:text-base lg:text-lg leading-8"
                 >
-                  {page.conatct.send}
+                  {loading ? (
+                    <div className="flex justify-center items-center gap-2">
+                      {page.contact.sending}
+                      <span>
+                        {loading && (
+                          <CircleDashed className="h-4 w-5 animate-spin" />
+                        )}
+                      </span>
+                    </div>
+                  ) : (
+                    page.contact.send
+                  )}
                 </Button>
               </form>
             </Form>

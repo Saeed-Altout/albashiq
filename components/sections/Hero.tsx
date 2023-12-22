@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
   return (
     <div
       id="hero"
-      className="flex justify-center items-center min-h-screen pt-20 md:pt-0"
+      className="flex justify-center items-center min-h-screen pt-16 md:pt-0"
     >
       <div className="container mx-auto flex justify-center items-center gap-10 flex-col lg:flex-row">
         <div className="space-y-5">

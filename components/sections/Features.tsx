@@ -1,9 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import { Locale } from "@/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
-
 import {
   TitleSection,
   Title,

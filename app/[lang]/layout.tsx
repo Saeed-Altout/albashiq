@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/layouts/Navbar";
 import Footer from "@/components/layouts/Footer";
 import Bar from "@/components/common/Bar";
+import { ToasterProvider } from "@/providers/ToasterProvider";
 
 export const metadata: Metadata = {
   title: "Albashiq Cleaning Services",
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang={params.lang} dir={params.lang == "ar" ? "rtl" : "ltr"}>
       <body className={params.lang == "ar" ? "!font-cairo" : "!font-poppins"}>
         <Navbar lang={params.lang} />
+        <ToasterProvider />
         <Bar />
         {children}
         <Footer lang={params.lang} />

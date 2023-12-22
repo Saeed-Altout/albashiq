@@ -2,9 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
 
-import { Locale } from "@/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
-
 import {
   TitleSection,
   Title,
@@ -34,10 +31,10 @@ const Areas: React.FC<AreasProps> = ({ content, data }) => {
           <ul className="grid w-full grid-flow-row grid-cols-2 gap-8">
             {data.map((area, index) => (
               <li key={index} className="flex justify-start items-center gap-2">
-                <span className="text-green-400">
+                <span className="text-[#27a8e0]">
                   <CheckCircle className="h-5 w-5" />
                 </span>
-                <p className="text-slate-800 tracking-wider text-sm md:text-base lg:text-lg leading-8">
+                <p className="text-slate-800 capitalize tracking-wider text-sm md:text-base lg:text-lg leading-8">
                   {area}
                 </p>
               </li>
