@@ -25,19 +25,19 @@ const Navbar = async ({ lang }: { lang: Locale }) => {
     },
     {
       label: menu.about,
-      href: "/#about",
+      href: "#about",
     },
     {
       label: menu.features,
-      href: "/#features",
+      href: "#features",
     },
     {
       label: menu.faqs,
-      href: "/#faqs",
+      href: "#faqs",
     },
     {
       label: menu["contact-us"],
-      href: "/#contact-us",
+      href: "#contact-us",
     },
   ];
 
