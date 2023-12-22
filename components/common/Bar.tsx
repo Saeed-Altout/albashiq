@@ -6,7 +6,7 @@ const Bar = () => {
   return (
     <div
       dir="ltr"
-      className="fixed bottom-0 left-0 flex justify-center items-center w-full h-16 md:bg-transparent md:border-none bg-white border-t z-50"
+      className="fixed bottom-0 left-0 flex justify-center items-center w-full h-16 md:bg-transparent md:border-none bg-white border-t z-40"
     >
       <div className="container">
         <div className="z-10">
