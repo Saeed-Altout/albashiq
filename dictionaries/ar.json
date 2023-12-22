@@ -97,7 +97,7 @@
         },
         "phoneNumber": {
           "label": "رقم الهاتف",
-          "placeholder": ""
+          "placeholder": "+971 50-1111-1111"
         },
         "message": {
           "label": "رسالة",

@@ -97,7 +97,7 @@
         },
         "phoneNumber": {
           "label": "Phone Number",
-          "placeholder": "(418) 456 - 2234"
+          "placeholder": "+971 50-1111-1111"
         },
         "message": {
           "label": "Message",
