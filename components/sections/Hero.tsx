@@ -23,7 +23,10 @@ const Hero: React.FC<HeroProps> = ({ content }) => {
   const { lang } = useParams();
 
   return (
-    <div id="hero" className="flex justify-center items-center min-h-screen">
+    <div
+      id="hero"
+      className="flex justify-center items-center min-h-screen pt-12"
+    >
       <div className="container mx-auto flex justify-center items-center gap-10 flex-col lg:flex-row">
         <div className="space-y-5">
           <h1 className="font-bold text-4xl capitalize lg:text-5xl xl:text-6xl 2xl:text-7xl xl:!leading-[85px] lg:!leading-[65px] !leading-[45px] tracking-wide">
