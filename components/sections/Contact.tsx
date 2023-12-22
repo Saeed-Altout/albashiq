@@ -32,6 +32,7 @@ import { Title, TitleSection } from "@/components/common/TitleSection";
 import contactUs from "@/public/contact-us.svg";
 import toast from "react-hot-toast";
 import { CircleDashed } from "lucide-react";
+import { useParams } from "next/navigation";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -48,8 +49,8 @@ const formSchema = z.object({
 });
 
 const Contact = ({ page }: { page: any }) => {
+  const { lang } = useParams();
   const [loading, setLoading] = useState(false);
-
   function onSubmit(values: z.infer<typeof formSchema>) {
     setLoading(true);
     emailjs
@@ -215,7 +216,10 @@ const Contact = ({ page }: { page: any }) => {
                       <FormLabel className="text-muted-foreground tracking-wider text-sm md:text-base lg:text-lg leading-8">
                         {page.contact.form.phoneNumber.label}
                       </FormLabel>
-                      <FormControl>
+                      <FormControl
+                        dir="ltr"
+                        className={lang == "ar" ? "text-right" : "text-left"}
+                      >
                         <Input
                           placeholder={
                             page.contact.form.phoneNumber.placeholder
