@@ -1,0 +1,200 @@
+{
+  "menu": {
+    "home": "home",
+    "about": "about",
+    "features": "features",
+    "faqs": "faqs",
+    "contact-us": "contact us"
+  },
+  "page": {
+    "hero": {
+      "title": "Quality cleaning for your home, office or companies.",
+      "subTitle": "Experience superior cleanliness with our professional building cleaning services. Our skilled team is dedicated to maintaining the pristine condition of your spaces, offering top-quality solutions tailored to your unique needs. Whether for commercial or residential settings, trust us as your reliable partner for a cleaner, healthier environment that exceeds expectations.",
+      "buttonBook": "Book now",
+      "buttonGetStarted": "Get Started"
+    },
+    "about": {
+      "headTitle": "",
+      "title": "Who are we?",
+      "subTitle": "",
+      "aboutContent": {
+        "paragraph-1": "We are a professional building cleaning services company committed to delivering exceptional cleanliness and hygiene for your spaces.",
+        "paragraph-2": "With a dedicated team of skilled professionals and a customer-centric approach, we take pride in maintaining the pristine condition of your buildings.",
+        "paragraph-3": "Our mission is to provide reliable and top-quality cleaning solutions tailored to your unique needs.",
+        "paragraph-4": "Whether it's commercial or residential, we are your trusted partner in ensuring a cleaner, healthier environment for all."
+      },
+      "button": "See More"
+    },
+    "areas": {
+      "headTitle": "",
+      "title": "What are the areas we cover?",
+      "subTitle": "We cover all areas of your home or office.",
+      "area": {
+        "pathroom": "pathroom",
+        "kitchens": "kitchens",
+        "living-rooms": "living Rooms",
+        "carpets": "carpets",
+        "bedrooms": "bedrooms",
+        "companies": "companies",
+        "offices": "offices",
+        "windows": "windows",
+        "hotels": "hotels",
+        "new-buildings": "new buildings"
+      }
+    },
+    "features": {
+      "headTitle": "",
+      "title": "Our Features",
+      "subTitle": "Our company is the best in this area, and we have many most important features:",
+      "feature": {
+        "feat-01": {
+          "title": "Professionalism",
+          "description": "Our team possesses advanced expertise and maintains unwavering commitment to the utmost professional benchmarks in every facet of our services. Recognizing the significance of professionalism and punctuality in our client interactions, we prioritize these values."
+        },
+        "feat-02": {
+          "title": "Diversity",
+          "description": "We offer versatile cleaning solutions spanning residential, commercial, and hospitality sectors. No matter the setting, our services are tailored to meet the unique requirements of each customer."
+        },
+        "feat-03": {
+          "title": "Quality Of service",
+          "description": "Our focus is on delivering top-tier services that yield exceptional outcomes. We leverage cutting-edge technology and the right tools to guarantee thorough cleanliness, effectively eliminating dirt and stains."
+        },
+        "feat-04": {
+          "title": "Attention To Detail",
+          "description": "We meticulously address every intricate detail in our work, comprehensively evaluating all facets and dimensions of the area to be cleaned, thus ensuring flawless results."
+        },
+        "feat-05": {
+          "title": "Customization",
+          "description": "We understand that every customer is distinct, with specific requirements. As a result, we offer tailor-made services to accommodate individual needs. Whether it's scheduling, service standards, or any other particulars, we're flexible and can adjust to meet your requests."
+        }
+      }
+    },
+    "customers": {
+      "headTitle": "",
+      "title": "Our Customers",
+      "subTitle": "What Customers say about our services. 😁",
+      "comments": {
+        "com-1": {
+          "name": "Sara",
+          "text": "I am so thankful for this house cleaning company! They cleaned my house amazingly and left it clean and fresh. I highly recommend them!"
+        },
+        "com-2": {
+          "name": "Mohammed",
+          "text": "This cleaning company is a great, professional team. They cleaned my office perfectly and left it bright and clean. I couldn't be happier!"
+        },
+        "com-3": {
+          "name": "Layla",
+          "text": "I rely on this company to clean my house regularly and I am completely satisfied with their services. Their team is reliable and meticulous in their work. I would recommend them to everyone!"
+        },
+        "com-4": {
+          "name": "Ahmed",
+          "text": "The cleaning company cleaned our corporate building and we were impressed with the results. The team was professional, prompt and left the building completely clean. Thank you so much!"
+        },
+        "com-5": {
+          "name": "Nura",
+          "text": "This house cleaning company is the best I have ever dealt with. The service was fast and efficient and the result was a clean and fresh home. I will continue to use their services in the future!"
+        },
+        "com-6": {
+          "name": "Yasmine",
+          "text": "I am very happy with the service of this cleaning company. They cleaned my house perfectly and paid attention to every detail. I would recommend them to anyone looking for a high-quality cleaning service."
+        }
+      }
+    },
+    "faqs": {
+      "headTitle": "",
+      "title": "Frequently Asked Questions",
+      "subTitle": "Below we explain the most important and most common questions asked by customers:",
+      "questions": {
+        "q-1": {
+          "question": "Who are we?",
+          "answer": "We are a professional building cleaning services company committed to delivering exceptional cleanliness and hygiene for your spaces. With a dedicated team of skilled professionals and a customer-centric approach, we take pride in maintaining the pristine condition of your buildings. Our mission is to provide reliable and top-quality cleaning solutions tailored to your unique needs. Whether it's commercial or residential, we are your trusted partner in ensuring a cleaner, healthier environment for all."
+        },
+        "q-2": {
+          "question": "What is our philosophy?",
+          "answer": "We are a professional building cleaning services company committed to delivering exceptional cleanliness and hygiene for your spaces. With a dedicated team of skilled professionals and a customer-centric approach, we take pride in maintaining the pristine condition of your buildings. Our mission is to provide reliable and top-quality cleaning solutions tailored to your unique needs. Whether it's commercial or residential, we are your trusted partner in ensuring a cleaner, healthier environment for all."
+        }
+      }
+    },
+    "conatct": {
+      "title": "Contact us",
+      "form": {
+        "fullName": {
+          "label": "Full Name",
+          "placeholder": "Jon Doe"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "jondoe@gmail.com"
+        },
+        "phoneNumber": {
+          "label": "Phone Number",
+          "placeholder": "(418) 456 - 2234"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Type your message here."
+        },
+        "services": {
+          "label": "Services",
+          "placeholder": "Select a service"
+        },
+        "servicesData": {
+          "serv01": {
+            "value": "Cleaning and sanitizing sofas and boards at the site",
+            "label": "Cleaning and sanitizing sofas and boards at the site"
+          },
+          "serv02": {
+            "value": "Service for recruiting and sterilizing curtains",
+            "label": "Service for recruiting and sterilizing curtains"
+          },
+          "serv03": {
+            "value": "Hourly worker Visits",
+            "label": "Hourly worker Visits"
+          },
+          "serv04": {
+            "value": "Service of workers’ visiting contracts",
+            "label": "Service of workers’ visiting contracts"
+          },
+          "serv05": {
+            "value": "Air conditioner cleaning service",
+            "label": "Air conditioner cleaning service"
+          },
+          "serv06": {
+            "value": "Service for the recruitment and sterilization of carpets and cabins at the site",
+            "label": "Service for the recruitment and sterilization of carpets and cabins at the site"
+          },
+          "serv07": {
+            "value": "Deep cleaning service for car brushes and interior room",
+            "label": "Deep cleaning service for car brushes and interior room"
+          },
+          "serv08": {
+            "value": "Office and Shops Cleaning Service",
+            "label": "Office and Shops Cleaning Service"
+          },
+          "serv09": {
+            "value": "Cleaning outdoor spaces",
+            "label": "Cleaning outdoor spaces"
+          },
+          "serv10": {
+            "value": "External Facade Cleaning Service",
+            "label": "External Facade Cleaning Service"
+          },
+          "serv11": {
+            "value": "Post-construction cleaning",
+            "label": "Post-construction cleaning"
+          },
+          "serv12": {
+            "value": "Sterilization Service",
+            "label": "Sterilization Service"
+          },
+          "serv13": {
+            "value": "Cleaning and sanitizing of tanks",
+            "label": "Cleaning and sanitizing of tanks"
+          }
+        }
+      },
+      "send": "Send",
+      "sending": "Sending"
+    }
+  }
+}
