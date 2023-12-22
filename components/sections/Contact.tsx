@@ -274,6 +274,7 @@ const Contact = ({ page }: { page: any }) => {
                       </FormLabel>
                       <FormControl>
                         <Textarea
+                          rows={10}
                           placeholder={page.contact.form.message.placeholder}
                           {...field}
                         />

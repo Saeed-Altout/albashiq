@@ -6,7 +6,7 @@ const Footer = ({ lang }: { lang: Locale }) => {
 
   return (
     <footer className="mb-40 md:mb-5 h-[150px]">
-      <div className="container">
+      <div className="container text-center">
         {lang === "en" ? (
           <p className="text-slate-800 tracking-wider text-sm md:text-base lg:text-lg leading-8 mx-auto w-fit py-4">
             Copyright Ⓒ {year}

@@ -89,15 +89,15 @@
       "form": {
         "fullName": {
           "label": "الاسم الكامل",
-          "placeholder": "Jon Doe"
+          "placeholder": "John Doe"
         },
         "email": {
           "label": "البريد الإلكتروني",
-          "placeholder": "jondoe@gmail.com"
+          "placeholder": "johndoe@gmail.com"
         },
         "phoneNumber": {
           "label": "رقم الهاتف",
-          "placeholder": "(418) 456 - 2234"
+          "placeholder": ""
         },
         "message": {
           "label": "رسالة",
